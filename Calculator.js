@@ -11,13 +11,13 @@ function calculatorFunction (operation, number1, ...number2)
 function factoryFunction (operation)
 {
     switch(operation){
-        case 'add' : return addition()
-        case 'substract' : return substraction()
-        case 'multiply' : return multiplication() 
-        case 'divide' : return division()
+        case 'add' : return addition
+        case 'substract' : return substraction
+        case 'multiply' : return multiplication 
+        case 'divide' : return division
     }
 }
-function addition (number1, ...number2)
+const addition = (number1, ...number2) =>
 {
     let sum = number1
     for (let i = 0; i < arguments.length; ++i){
@@ -28,7 +28,7 @@ function addition (number1, ...number2)
     console.log('floor : ',Math.ceil(sum)); 
 }
 
-function substraction (number1, ...number2)
+const substraction = (number1, ...number2) =>
 {
     let sub = number1
     for (let i = 0; i < arguments.length; ++i){
@@ -39,7 +39,7 @@ function substraction (number1, ...number2)
     console.log('floor : ',Math.ceil(sub)); 
 }
 
-function multiplication (number1, ...number2)
+const multiplication = (number1, ...number2) =>
 {
     let mul = number1
     for (let i = 0; i < arguments.length; ++i){
@@ -50,7 +50,7 @@ function multiplication (number1, ...number2)
     console.log('floor : ',Math.ceil(mul));   
 }
 
-function division (number1, ...number2)
+const division = (number1, ...number2) =>
 {
     let div = number1
     for (let i = 0; i < arguments.length; ++i){
@@ -61,7 +61,5 @@ function division (number1, ...number2)
     console.log('floor : ',Math.ceil(div));   
 }
 
-calculatorFunction("add", 13, 45, 56, 76)
-factoryFunction("add")
-
+console.log(factoryFunction('add'));
 
